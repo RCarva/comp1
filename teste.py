@@ -42,18 +42,18 @@ class Materia:
             print("Vagas Totais: {} Vagas Livres {}".format(self.vagas, self.vagas - len(self.alunos)))
         else:
             print("Alunos inscritos em {}:\n".format(self.nome))
-            print("{}".format(self.alunos.nome))
+
+            for i in range (len(self.alunos)):
+                print("Nome: {}, DRE: {}, Matricula: {}".format(self.alunos[i].nome, self.alunos[i].dre, self.alunos[i].matricula)) 
+                                                
+                                            
             print("Vagas Totais: {} Vagas Livres {}".format(self.vagas, self.vagas - len(self.alunos)))
 
 
     
-MAB243 = Materia("COMP1",10)
+mab = Materia("COMP1",10)
 carva = UFRJ("rafael", 12346)
 lc = UFRJ("Luccas", 12478,"trancada")
-MAB243.InscreverAluno(lc)
-MAB243.InscreverAluno(carva)
-MAB243.__str__()
-
-    
-
-
+mab.InscreverAluno(lc)
+mab.InscreverAluno(carva)
+mab.__str__()
